@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="FlowBoard is a lightweight single-page project dashboard." />
+  <title>FlowBoard — Workspace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#/dashboard" aria-label="FlowBoard home">
+        <span class="brand-mark">f</span><span>flowboard</span>
+      </a>
+      <div class="workspace-label">WORKSPACE</div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#/dashboard" data-route="dashboard" class="nav-link"><span class="nav-icon">▦</span> Overview</a>
+        <a href="#/projects" data-route="projects" class="nav-link"><span class="nav-icon">◫</span> Projects <span class="nav-count">4</span></a>
+        <a href="#/tasks" data-route="tasks" class="nav-link"><span class="nav-icon">✓</span> My tasks</a>
+        <a href="#/team" data-route="team" class="nav-link"><span class="nav-icon">♧</span> Team</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-card"><div class="help-icon">✦</div><strong>Need a hand?</strong><p>Visit the help center for tips and shortcuts.</p><button class="text-button" id="helpButton">Explore help ↗</button></div>
+        <div class="profile"><div class="avatar avatar-purple">JD</div><div><strong>Jordan Davis</strong><small>Free workspace</small></div><button class="more-button" aria-label="Profile options">···</button></div>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Toggle navigation">☰</button>
+        <div class="breadcrumbs"><span>Workspace</span><b>/</b><strong id="pageCrumb">Overview</strong></div>
+        <div class="top-actions"><button class="icon-button" id="searchButton" aria-label="Search">⌕</button><button class="icon-button notification" aria-label="Notifications">♧<i></i></button><div class="avatar avatar-orange">JD</div></div>
+      </header>
+      <section id="app" class="page-content" aria-live="polite"></section>
+      <footer class="footer"><span>© 2025 FlowBoard</span><span>Made for focused work <b>✦</b></span></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
